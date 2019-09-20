@@ -1,4 +1,4 @@
-package no.nav.syfo
+package no.nav.helse.nl
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
@@ -13,14 +13,20 @@ fun getEnvironment(): Environment {
     objectMapper.registerKotlinModule()
     return if (appIsRunningLocally) {
         objectMapper.readValue(
-            firstExistingFile(localEnvironmentPropertiesPath, defaultlocalEnvironmentPropertiesPath),
+            firstExistingFile(
+                localEnvironmentPropertiesPath,
+                defaultlocalEnvironmentPropertiesPath
+            ),
             Environment::class.java
         )
     } else {
         Environment(
             getEnvVar("APPLICATION_PORT", "8080").toInt(),
             getEnvVar("APPLICATION_THREADS", "4").toInt(),
-            objectMapper.readValue(File(vaultApplicationPropertiesPath).readText(), VaultCredentials::class.java)
+            objectMapper.readValue(
+                File(vaultApplicationPropertiesPath).readText(),
+                VaultCredentials::class.java
+            )
         )
     }
 }

@@ -1,4 +1,4 @@
-package no.nav.syfo.traceinterceptor
+package no.nav.helse.nl.traceinterceptor
 
 import io.ktor.application.ApplicationCall
 import io.ktor.application.call

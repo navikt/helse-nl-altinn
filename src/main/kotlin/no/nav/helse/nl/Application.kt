@@ -1,4 +1,4 @@
-package no.nav.syfo
+package no.nav.helse.nl
 
 import io.ktor.application.Application
 import io.ktor.application.install
@@ -19,13 +19,13 @@ import io.prometheus.client.CollectorRegistry
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.cancelChildren
 import kotlinx.coroutines.runBlocking
-import no.nav.syfo.api.registerNaisApi
+import no.nav.helse.nl.api.registerNaisApi
 import org.slf4j.LoggerFactory
 import java.util.concurrent.Executors
 
 data class ApplicationState(var running: Boolean = true, var initialized: Boolean = false)
 
-private val log: org.slf4j.Logger = LoggerFactory.getLogger("no.nav.helse.nl.helse-nl-altinn")
+private val log: org.slf4j.Logger = LoggerFactory.getLogger("ApplicationKt")
 
 fun main() = runBlocking(Executors.newFixedThreadPool(2).asCoroutineDispatcher()) {
     val env = getEnvironment()
