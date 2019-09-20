@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: create docker tag
         env:
-          DOCKER_IMAGE: navikt/helse-nl-altinn
+          DOCKER_IMAGE: navikt/helse-nl-altinn/helse-nl-altinn
         run: |
           echo $DOCKER_IMAGE > .docker_image
           echo $(echo $GITHUB_SHA | cut -c1-7) > .docker_tag
