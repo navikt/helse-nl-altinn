@@ -16,13 +16,13 @@ jobs:
         run: |
           echo $DOCKER_IMAGE > .docker_image
           echo $(echo $GITHUB_SHA | cut -c1-7) > .docker_tag
-      - uses: actions/setup-java@v1
-        with:
-          java-version: '11.x'
-      - name: test and build
-        run: ./gradlew test build
-      - name: build docker image
-        run: docker build . --pull -t $(cat .docker_image):$(cat .docker_tag)
+#      - uses: actions/setup-java@v1
+#        with:
+#          java-version: '11.x'
+#      - name: test and build
+#        run: ./gradlew test build
+#      - name: build docker image
+#        run: docker build . --pull -t $(cat .docker_image):$(cat .docker_tag)
 #      - name: push docker image
 #        run: |
 #          echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
