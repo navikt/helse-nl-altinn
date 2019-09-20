@@ -51,5 +51,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           cluster: dev-fss
-          team: teamsykefravaer
+          team: teamsykefravr
           resources: ../syfonais/preprod-fss/helse-nl-altinn/naiserator.yaml
