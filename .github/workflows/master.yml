@@ -32,7 +32,7 @@ jobs:
 #          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       - uses: actions/checkout@master
         with:
-          repository: navikt/syfonais
+          repository: navikt/syfonais.git
           ref: master
           path: syfonais
       - name: ls
