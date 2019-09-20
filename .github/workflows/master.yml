@@ -46,7 +46,7 @@ jobs:
 #    runs-on: ubuntu-latest
 #    steps:
       - name: deploy
-        uses: navikt/deployment-cli/action@1fd17722943b1fe4bf0af27b5896605b9b9d04d9
+        uses: navikt/deployment-cli/action@4951123ccd16702b8ed14a4367b8cfba7fc05de1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
