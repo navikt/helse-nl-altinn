@@ -30,12 +30,12 @@ jobs:
 #        env:
 #          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
 #          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
         with:
           repository: navikt/syfonais.git
           ref: master
           path: syfonais
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
       - name: ls
         run: |
           ls -al
