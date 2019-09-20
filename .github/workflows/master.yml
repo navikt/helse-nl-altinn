@@ -31,9 +31,10 @@ jobs:
 #          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
 #          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       - uses: actions/checkout@master
-        repository: navikt/syfonais
-        ref: master
-        path: syfonais
+        with:
+          repository: navikt/syfonais
+          ref: master
+          path: syfonais
       - name: ls
         run: |
           ls -al
