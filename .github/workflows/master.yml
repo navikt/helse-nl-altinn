@@ -35,6 +35,7 @@ jobs:
           repository: navikt/syfonais.git
           ref: master
           path: syfonais
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: ls
         run: |
           ls -al
