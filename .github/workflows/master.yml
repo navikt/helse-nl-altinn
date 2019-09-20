@@ -53,5 +53,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           cluster: dev-fss
-          team: teamsykefravr
+          team: helse
           resources: naiserator.yaml
