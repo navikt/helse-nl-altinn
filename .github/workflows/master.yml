@@ -40,7 +40,7 @@ jobs:
         run: |
           pwd
           ls -al
-          ls -al syfonais
+          ls -al ../syfonais
 #      - name: deploy to preprod
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
