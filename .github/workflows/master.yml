@@ -38,6 +38,7 @@ jobs:
           token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
       - name: ls
         run: |
+          pwd
           ls -al
           ls -al syfonais
 #      - name: deploy to preprod
